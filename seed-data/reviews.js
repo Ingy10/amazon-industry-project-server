@@ -11,7 +11,7 @@ export default [
     user_name: 'John D',
     timestamp: 1694565600,
     verified_purchase: true,
-    vine_reviewer: false,
+    vine_reviewer: true,
     helpful_vote: 35,
   },
   {
@@ -56,7 +56,7 @@ export default [
     user_name: 'Linda P',
     timestamp: 1694576400,
     verified_purchase: true,
-    vine_reviewer: false,
+    vine_reviewer: true,
     helpful_vote: 18,
   },
   {
@@ -131,7 +131,7 @@ export default [
     user_name: 'Chris T',
     timestamp: 1694594400,
     verified_purchase: true,
-    vine_reviewer: false,
+    vine_reviewer: true,
     helpful_vote: 22,
   },
   {
@@ -266,7 +266,7 @@ export default [
     user_name: 'Emily R',
     timestamp: 1694626800,
     verified_purchase: true,
-    vine_reviewer: false,
+    vine_reviewer: true,
     helpful_vote: 14,
   },
   {
