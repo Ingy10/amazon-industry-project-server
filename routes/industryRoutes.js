@@ -31,10 +31,25 @@ router.get("/keywords", async (_req, res) => {
     }
   });
 
-// for specific keyword
-router.get("/keywords/:key", async (_req, res) => {
+// for specific keyword + reviews
+router.get("/keywords/:key", async (req, res) => {
+    const { key } = req.params;
     try {
-      const data = await knex("keywords").where({ keyword: key });
+      const data = await knex("keywords")  
+      .join("reviews", "reviews.id", "keywords.review_id")
+      .select(
+        "keywords.id",
+        "keywords.keyword",
+        "keywords.keyword_rating",
+        "reviews.rating",
+        "reviews.title",
+        "reviews.comment",
+        "reviews.user_name",
+        "reviews.timestamp",
+        "reviews.verified_purchase",
+        "reviews.vine_reviewer",
+        "reviews.helpful_vote",
+      ).where({ keyword: key });
       if (data.length === 0) {
           return res.status(404).json({ message: "No keywords found" });
         }
