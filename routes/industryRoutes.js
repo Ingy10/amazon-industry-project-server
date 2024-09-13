@@ -5,7 +5,7 @@ import configuration from "../knexfile.js";
 const router = express.Router();
 const knex = initKnex(configuration);
 
-// for list of warehouses
+// for list of comments
 router.get("/", async (_req, res) => {
   try {
     const data = await knex("reviews");
