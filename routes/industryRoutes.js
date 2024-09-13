@@ -2,7 +2,7 @@ import express from "express";
 
 const router = express.Router();
 
-router.post("/:productId/review/add", async (req, res) => {
+router.post("/review/add", async (req, res) => {
   try {
     if (!req.body.title || !req.body.description) {
       res.status(400).json("Title and review description are required");
